@@ -1,0 +1,19 @@
+{
+  "name": "ctc-medical-inventory-tracker",
+  "version": "1.0.0",
+  "description": "Team Member: Jackie Ada",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fidelsalgado/ctc-medical-inventory-tracker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fidelsalgado/ctc-medical-inventory-tracker/issues"
+  },
+  "homepage": "https://github.com/fidelsalgado/ctc-medical-inventory-tracker#readme"
+}
