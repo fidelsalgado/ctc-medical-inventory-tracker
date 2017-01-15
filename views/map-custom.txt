@@ -1,0 +1,23 @@
+IMAGE
+map-custom.jpg
+882
+709
+
+VERTEXES
+Africa;258;68
+Rafiki's Planet Watch;402;66
+Asia;447;185
+Discovery Island;356;360
+DinoLandUSA;605;589
+Oasis;357;495
+Camp Minnie-Mickey;104;531
+
+EDGES
+Rafiki's Planet Watch;Asia;10
+Rafiki's Planet Watch;Africa;15
+Africa;Discovery Island;25
+Asia;Discovery Island;22
+Discovery Island;Camp Minnie-Mickey;15
+Discovery Island;Oasis;5
+DinoLandUSA;Discovery Island;8
+DinoLandUSA;Asia;32
