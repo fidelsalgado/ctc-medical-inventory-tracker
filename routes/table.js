@@ -8,21 +8,21 @@ var sqlite3 = require("sqlite3").verbose();
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-	var db = new sqlite3.Database('./data/test.db');
-	var testOutput = ""
+  //var db = new sqlite3.Database('./data/test.db');
+  //var testOutput = ""
 
-	db.all("SELECT rowid AS id, info FROM lorem", function(err, rows) {
-		if (err) throw err;
-		res.json(rows)
-	})
+  //db.all("SELECT rowid AS id, info FROM lorem", function(err, rows) {
+    //if (err) throw err;
+    //res.json(rows)
+  //})
 
-	/*fs.readFile('./data/medication_inventory_dummy_data.csv', 'utf8', function(err, data) {  
-    	if (err) throw err;
-    	var table = parse(data, {comment: '#'}, function(err, output){
-    		if (err) throw err;
-  			res.json(output)
-		});  
-	});*/
+  fs.readFile('./data/medication_inventory_dummy_data.csv', 'utf8', function(err, data) {  
+      if (err) throw err;
+      var table = parse(data, {comment: '#'}, function(err, output){
+        if (err) throw err;
+        res.json(output)
+    });  
+  });
 });
 
 router.post('/', function(req, res, next) {
