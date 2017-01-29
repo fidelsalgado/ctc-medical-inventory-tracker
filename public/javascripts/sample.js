@@ -9,7 +9,7 @@
       var headHtml = "<tr>";
       for(var i = 0; i < headData.length; i++) {
         console.log(headData[i]);
-        headHtml += "<td>" + headData[i] + "</td>";
+        headHtml += "<th>" + headData[i] + "</th>";
       }
       headHtml += "</tr>";
       $tableHead.append(headHtml);
@@ -27,6 +27,34 @@
 
       //console.log($tableHead);
       //console.log($tableBody);
+
     });
   });
+  
 })() 
+
+function myFunction() {
+    // Table filtering: http://www.w3schools.com/howto/howto_js_filter_table.asp    
+    var input, filter, table, tr, td, i;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("main-table");
+    tr = table.getElementsByTagName("tr");
+    // Loop through all table rows, and hide those who don't match the search query
+    for (i = 0; i < tr.length; i++) {
+      var counter = 0;
+      td = tr[i].getElementsByTagName("td")[0];
+      // Loops through each cell in each row
+      while(td != undefined){
+        if (td) {
+          if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+            break;
+          } else {
+            tr[i].style.display = "none";
+          }
+        }
+        td = tr[i].getElementsByTagName("td")[counter++]; 
+      }
+    }
+  }
