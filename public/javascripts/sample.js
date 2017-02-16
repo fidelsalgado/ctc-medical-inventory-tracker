@@ -1,6 +1,6 @@
 (function() {
   $(document).ready(function(){
-    $.get("http://localhost:3000/table", function( data ) {
+    $.get("https://fast-mountain-57467.herokuapp.com/table/", function( data ) {
       console.log("DATA = " + data);
       var $tableHead = $("#main-table-head");
       var $tableBody = $("#main-table-body");
